@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "autobot"
+version = "0.1.0"
+description = "Transformation workflow for data pipelines."
+authors = [
+    "Leo Qi <leo@leozqi.com>",
+]
+license = "Apache-2.0"
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/leozqi/autobot"
+Issues = "https://github.com/leozqi/autobot/issues"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+duckdb = "^1.0.0"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

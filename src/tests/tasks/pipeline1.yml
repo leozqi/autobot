@@ -1,0 +1,16 @@
+name: "Pipeline 1"
+inputs:
+outputs:
+  - "table_one_hello"
+tasks:
+  - name: "Task 1"
+    inputs:
+    outputs: "table_one_hello"
+    steps: |  # Exposes DuckDB `duckdb`, `beautifulsoup` with exec
+      duckdb.sql("CREATE TABLE users (id INT, description VARCHAR)")
+  - name: "Task 2"
+
+# Each table can only be used once (it is a step in the process.)
+# Aka you can't create the same table name twice.
+# We use exec to run the Python. The end goal is to have a notebook like interface GUI filling in this YAML file
+# BUt we will validate this file initially.
